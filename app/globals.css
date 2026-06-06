@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@400;500;600&display=swap');
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    background: #060606;
+    color: #ffffff;
+    font-family: 'Barlow Condensed', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+
+  /* Film grain overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.022;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply text-[11.5px] font-bold tracking-[4px] uppercase text-or mb-3;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .section-heading {
+    @apply font-russo text-[clamp(30px,5vw,58px)] leading-[.96] mb-3;
+  }
+
+  .section-sub {
+    @apply text-[18px] text-gl max-w-[520px] mb-[50px] leading-[1.55];
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aphase {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.5s ease, opacity 0.5s ease !important;
+    opacity: 0 !important;
+  }
+  .aphase.vis {
+    clip-path: inset(0 0% 0 0) !important;
+    opacity: 1 !important;
+  }
+  .aphase.exit {
+    clip-path: inset(0 0 0 100%) !important;
+    opacity: 0 !important;
+  }
+
+  #score-pop.fire {
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) scale(1) translateY(0) !important;
+  }
+
+  #scroll-prompt.gone {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
