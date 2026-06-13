@@ -16,7 +16,7 @@ export default function RegistrationSection() {
             REGISTER YOUR TEAM
           </h2>
           <p className="text-[18px] text-white/88 mb-[34px] max-w-[500px] mx-auto relative">
-            Join the Mumbai Premier Basketball League 2026. Only 16 spots
+            Join the Mumbai Premier Basketball League 2026. Only 18 spots
             available — secure yours now.
           </p>
           <a
@@ -86,7 +86,7 @@ export default function RegistrationSection() {
             Register Now &mdash; ₹3,000
           </a>
           <p className="mt-[14px] text-[13.5px] text-gr">
-            Only 16 spots available &middot; First come, first serve
+            Only 18 spots available &middot; First come, first serve
           </p>
         </div>
 

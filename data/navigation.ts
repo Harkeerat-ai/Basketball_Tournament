@@ -2,8 +2,7 @@ import { NavLink } from "@/lib/types";
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "#home", section: "home" },
-  { label: "Tournament", href: "#tournament", section: "tournament" },
-  { label: "Teams", href: "#teams", section: "teams" },
+  { label: "Teams", href: "#registered-teams", section: "registered-teams" },
   { label: "Fixtures", href: "#fixtures", section: "fixtures" },
   { label: "Table", href: "#table", section: "table" },
   {
@@ -14,3 +13,4 @@ export const navLinks: NavLink[] = [
     isRegister: true,
   },
 ];
+

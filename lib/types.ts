@@ -68,6 +68,7 @@ export interface KnockoutMatch {
   team2: string;
   score1: string;
   score2: string;
+  status?: "scheduled" | "live" | "completed";
 }
 
 export interface StandingRow {
@@ -80,4 +81,13 @@ export interface StandingRow {
   pts: string;
   isTop?: boolean;
   isTbd?: boolean;
+}
+
+export interface GroupMatch extends KnockoutMatch {
+  group: string;
+}
+
+export interface GroupStandings {
+  group: string;
+  rows: StandingRow[];
 }

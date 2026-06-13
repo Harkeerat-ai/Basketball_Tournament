@@ -31,7 +31,7 @@ export const infoCards: InfoCard[] = [
   {
     icon: "⚡",
     label: "Spots",
-    value: "16 Teams Only",
+    value: "18 Teams",
     note: "First come, first served",
   },
 ];
@@ -53,15 +53,16 @@ export const eventDetails: EventDetail[] = [
   { key: "Venue", value: "Dominic Savio, Shere Punjab, Andheri East, Mumbai 400093" },
   { key: "Category", value: "Open Category" },
   { key: "Format", value: "5 on 5 Tournament" },
-  { key: "Teams", value: "16 Teams Only — first come, first serve" },
+  { key: "Teams", value: "18 Teams — first come, first serve" },
   { key: "Rules", value: "FIBA rules throughout" },
 ];
 
 export const formatSteps: FormatStep[] = [
-  { number: 1, title: "First Round — Knockout", description: "All 16 teams compete. Losers are eliminated immediately." },
-  { number: 2, title: "Top 8 Teams Qualify", description: "The 8 winners advance to the League Phase." },
-  { number: 3, title: "League Matches", description: "Top 8 teams compete in a league format to determine final standings." },
-  { number: 4, title: "Championship & Awards", description: "Winner takes ₹30,000 + Trophy. Runner-Up takes ₹15,000 + Trophy." },
+  { number: 1, title: "First Round — Knockout", description: "All 18 teams compete in 9 matches. Losers are eliminated immediately." },
+  { number: 2, title: "Group Stage", description: "9 winners are placed into 3 groups of 3. Each group plays a round-robin (3 matches per group)." },
+  { number: 3, title: "Quarterfinals", description: "Top 2 from each group + 2 best third-place finishers advance to the quarterfinals (8 teams)." },
+  { number: 4, title: "Semifinals & Final", description: "Quarterfinal winners compete in the semifinals. Winners meet in the final." },
+  { number: 5, title: "Championship & Awards", description: "Winner takes ₹30,000 + Trophy. Runner-Up takes ₹15,000 + Trophy." },
 ];
 
 export const rules: Rule[] = [
